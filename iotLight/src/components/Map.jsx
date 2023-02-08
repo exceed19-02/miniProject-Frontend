@@ -2,7 +2,6 @@ import React from "react";
 import Bulb from "./bulb";
 
 const Map = () => {
-  // console.log("jjj");
   return (
     <div className="Map">
       <h1>hello map</h1>
