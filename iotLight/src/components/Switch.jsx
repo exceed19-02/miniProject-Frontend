@@ -1,15 +1,15 @@
 import React from 'react'
 import '../styles/Switch.css'
-import useState from 'react'
+import {useState} from 'react'
 
 const Switch = () => {
 
-// const [status,setStatus] = useState(false)
+  const [status,setStatus] = useState(false)
 
   return (
     <>
         <label class="switch">
-        <input type="checkbox"/>
+        <input onChange={() => setStatus(true)} type="checkbox"/>
         <span class="slider"></span>
         </label>
     </>
