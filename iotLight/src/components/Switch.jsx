@@ -2,15 +2,17 @@ import React from 'react'
 import '../styles/Switch.css'
 import {useState} from 'react'
 
-const Switch = () => {
 
-  const [status,setStatus] = useState(false)
+const Switch = ({status}) => {
+
+  const [onoff,setOnoff] = useState(false)
+  
 
   return (
     <>
-        <label class="switch">
-        <input onChange={() => setStatus(true)} type="checkbox"/>
-        <span class="slider"></span>
+        <label className="switch">
+        <input onChange={() => console.log()} disabled={status} type="checkbox"/>
+        <span className="slider"></span>
         </label>
     </>
   )
