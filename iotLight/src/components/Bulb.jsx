@@ -1,10 +1,11 @@
 import React from "react";
-import "styles/bulb.css";
+import "../styles/bulb.css";
 // import { useState, useEffect } from 'react'
 
 const Bulb = (mode, status, brightness = 0) => {
+  console.log(brightness, mode, status);
   const Img = getBulbImg(mode, status, brightness);
-  console.log(Img)
+  console.log("jjj");
 
   return (
     <div className="bulb">
@@ -18,13 +19,14 @@ const Bulb = (mode, status, brightness = 0) => {
 function getBulbImg(mode, status, brightness) {
   if (status === false || brightness === 0) {
     return "assets/bulboff.png";
-  } else if (brightness <= 34) {
-    return "assets/bulbdim.png";
-  } else if (brightness <= 67) {
-    return "assets/bulbmed.png";
-  } else {
-    return "assets/bulbfull.png";
   }
+  if (brightness <= 34) {
+    return "assets/bulbdim.png";
+  }
+  if (brightness <= 67) {
+    return "assets/bulbmed.png";
+  }
+  return "assets/bulbfull.png";
 }
 
 //TODO: add a function to get the correct bulb image based on mode (Disco mode and Auto mode)

@@ -1,6 +1,5 @@
 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import ControlPanel from './components/ControlPanel'
 import Switch from './components/Switch'
