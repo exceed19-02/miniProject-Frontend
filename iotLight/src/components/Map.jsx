@@ -6,8 +6,7 @@ const Map = () => {
     <div className="Map">
       <h1>hello map</h1>
 
-      <Bulb mode="rgb" status="true" brightness="100" />
-
+      <Bulb mode="rgb" status={true} brightness={100} />
     </div>
   );
 };
